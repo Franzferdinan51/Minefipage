@@ -119,11 +119,13 @@ body {
 .tradingview-widget-container-mini {
     margin-top: -20rem;
     margin-bottom: 15rem;
+    padding-left: 5%;
 }
 
 .tradingview-widget-container {
     margin-top: -30rem;
     margin-bottom: 15rem;
+    padding-left: 5%;
 }
 
 
