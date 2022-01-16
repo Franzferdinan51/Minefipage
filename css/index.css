@@ -1,0 +1,286 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1641412881901-a1acb7e80dbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80);
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+
+/* Sidebar */
+
+#sidebar {
+    padding: 2.5em 2.5em 0.5em 2.5em;
+    background: rgba(23, 183, 204, 0.85);
+    cursor: default;
+    height: 90vh;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    text-align: right;
+    top: 0;
+    width: 2rem;
+    z-index: 10000;
+}
+
+#sidebar>.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(0);
+    transition: opacity 1s ease;
+    min-height: 100%;
+    opacity: 1;
+    width: 100%;
+}
+
+body.is-ie #sidebar>.inner {
+    height: 100%;
+}
+
+#sidebar nav>ul {
+    list-style: none;
+    padding: 0;
+    padding: 1;
+}
+
+#sidebar nav>ul>li {
+    transform: translateY(0);
+    transition: opacity 0.15s ease, transform 0.75s ease;
+    margin: 1.5em 0 0 0;
+    opacity: 1;
+    padding: 0;
+    position: relative;
+}
+
+#sidebar nav>ul>li:first-child {
+    margin: 0;
+}
+
+#sidebar nav a {
+    transition: color 0.2s ease;
+    border: 0;
+    color: white;
+    display: block;
+    font-size: 0.6em;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    line-height: 1.75;
+    outline: 0;
+    padding: 1.35em 0;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#sidebar nav a:before,
+#sidebar nav a:after {
+    border-radius: 0.2em;
+    bottom: 0;
+    content: '';
+    height: 0.2em;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+#sidebar nav a:before {
+    background: black;
+}
+
+#sidebar nav a:after {
+    background-image: linear-gradient(to right, blue, white);
+    transition: max-width 0.2s ease;
+    max-width: 0;
+}
+
+#sidebar nav a:hover {
+    color: yellowgreen;
+}
+
+#sidebar nav a.active {
+    color: #ffffff;
+}
+
+#sidebar nav a.active:after {
+    max-width: 100%;
+}
+
+body.is-preload #sidebar>.inner {
+    opacity: 0;
+}
+
+body.is-preload #sidebar nav ul li {
+    transform: translateY(2em);
+    opacity: 0;
+}
+
+@media screen and (max-width: 1280px) {
+    #sidebar {
+        height: 6em;
+        left: 0;
+        line-height: 6em;
+        overflow: hidden;
+        margin-bottom: 50em;
+        text-align: center;
+        top: 0;
+        width: 25%;
+    }
+    #sidebar>.inner {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: stretch;
+        height: inherit;
+        line-height: inherit;
+    }
+    #sidebar nav {
+        height: inherit;
+        line-height: inherit;
+    }
+    #sidebar nav ul {
+        display: flex;
+        height: inherit;
+        line-height: inherit;
+        margin: 0;
+    }
+    #sidebar nav ul li {
+        display: block;
+        height: inherit;
+        line-height: inherit;
+        margin: 0 0 0 2em;
+        padding: 0;
+    }
+    #sidebar nav a {
+        height: inherit;
+        line-height: inherit;
+        padding: 0;
+    }
+    #sidebar nav a:after {
+        background-image: none;
+        background-color: white;
+        margin-bottom: 25%;
+    }
+}
+
+@media screen and (max-width: 536px) {
+    #sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 15%;
+        margin-bottom: 2 rem;
+        padding-bottom: -350px;
+    }
+}
