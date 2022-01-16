@@ -116,9 +116,7 @@ body {
     opacity: 0.6;
 }
 
-.tradingview-widget-container-mini {
-    margin-bottom: -10rem;
-}
+.tradingview-widget-container-mini {}
 
 .tradingview-widget-container {
     margin-bottom: 150rem;
