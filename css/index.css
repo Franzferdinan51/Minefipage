@@ -116,6 +116,10 @@ body {
     opacity: 0.6;
 }
 
+tradingview-widget-container {
+    padding-top: 1em;
+}
+
 
 /* Sidebar */
 
