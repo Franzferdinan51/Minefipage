@@ -1,4 +1,14 @@
 import Web3 from 'web3';
+import { useTronLink } from '../../contexts/tronlink';
+const {
+    wallet, // The connected wallet adress
+    walletName, // The connected wallet name
+    trxBalance, // Balance in TRX of the connected wallet
+    connectToWallet, // Method that connects to the wallet and create a listener no wallet updates
+    isConnected // Boolean that returns if the wallet is connected or not
+    isMainNet // Boolean that returns if the waller is connected on main network or not
+} = useTronLink();
+
 var web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:4444/'));
 
 const TronWeb = require('tronweb')
