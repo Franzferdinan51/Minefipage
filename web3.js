@@ -25,4 +25,31 @@ const getWeb3 = () => new Promise((resolve) => {
     });
 });
 
-export default getWeb3;
+getWeb3()
+    .then((result) => {
+        this.web3 = result;
+    });
+
+this.web3.eth.getAccounts()
+    .then((accounts) => {
+        this.account = accounts[0];
+    })
+const myContractInstance = new this.web3.eth.Contract(myContractAbi, myContractAddress)
+
+this.myContractInstance.methods.myMethod(myParams)
+    .call()
+    .then(
+        // do stuff with returned values
+    )
+
+this.myContractInstance.methods.myMethod(myParams)
+    .send({
+        from: this.account,
+        gasPrice: 0
+    })
+    .then(
+        (receipt) => {
+            // returns a transaction receipt}
+        )
+
+        export default getWeb3;
