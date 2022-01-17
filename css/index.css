@@ -118,12 +118,14 @@ body {
 
 .tradingview-widget-container-mini {
     margin-top: 1rem;
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
     padding-left: 5%;
+    padding-bottom: 0.5%;
+    padding-top: 1rem;
 }
 
 .tradingview-widget-container {
-    margin-top: -55rem;
+    margin-top: -75rem;
     margin-bottom: 15rem;
     padding-left: 10%;
     padding-bottom: 5rem;
@@ -142,8 +144,12 @@ body {
     margin-bottom: 100rem;
 }
 
-.h1 {
-    color: #545de6
+.converter {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    padding-left: 5%;
+    padding-bottom: 0.5%;
+    padding-top: 1rem;
 }
 
 
