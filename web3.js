@@ -1,4 +1,14 @@
 import Web3 from 'web3';
+var web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:4444/'));
+
+const TronWeb = require('tronweb')
+
+const tronWeb = new TronWeb({
+    fullHost: 'https://api.trongrid.io',
+    headers: { "TRON-PRO-API-KEY": 'your api key' },
+    privateKey: 'your private key'
+})
+
 
 const getWeb3 = () => new Promise((resolve) => {
     window.addEventListener('load', () => {
