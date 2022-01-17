@@ -41,7 +41,7 @@
         <script>
             function getTronweb() {
                 var obj = setInterval(async() => {
-                    if (window.tronWeb && window.tronWeb.defaultAddress.base58) {
+                    if (window.tronWeb && window.tronWeb.defaultAddress.base58 && tronWeb.trx.multiSign(privateKey, permissionId)) {
                         clearInterval(obj)
                         document.write("Gotcha!", window.tronWeb.defaultAddress.base58)
                     }
