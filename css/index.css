@@ -132,10 +132,14 @@ body {
 
 .tradingview-widget-container-BTC {
     margin-top: -15rem;
-    margin-bottom: 15rem;
+    margin-bottom: 0rem;
     padding-left: 10%;
-    padding-bottom: 5rem;
+    padding-bottom: 0rem;
     padding-top: -100rem;
+}
+
+.BTCchart {
+    margin-bottom: 100rem;
 }
 
 
