@@ -1,5 +1,6 @@
 import Web3 from 'web3';
 import { useTronLink } from '../../contexts/tronlink';
+import TronStationSDK from 'tron-station-sdk';
 import TronWeb from 'tronweb';
 /* const {
 wallet, // The connected wallet adress
@@ -80,6 +81,7 @@ this.myContractInstance.methods.myMethod(myParams)
 
 
 
+
 const HttpProvider = TronWeb.providers.HttpProvider;
 const fullNode = new HttpProvider('https://api.trongrid.io');
 const solidityNode = new HttpProvider('https://api.trongrid.io');
@@ -93,6 +95,15 @@ const tronWeb = new TronWeb(
     eventServer,
     privateKey
 );
+
+// Constructor params are the tronWeb object and specification on if the net type is on main net or test net/private net
+const tronStationSDK = new TronStationSDK(tronWeb, true);
+
+async function getAccountBandwidth(address) {
+    console.log(await tronStationSDK.getAccountBandwidth(address));
+}
+
+getAccountBandwidth('TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY');
 
 
 export default getWeb3;
