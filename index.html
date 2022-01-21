@@ -51,14 +51,14 @@
     </form>
 
 
-
-    <form style="padding-left: 30%; padding-top: 0.5%;" method="get " action="/button.html ">
+<!--This is the button for tron wallet connection then if true sends to another site-->
+    <form style="padding-left: 30%; padding-top: 0.5%;" method="get " action="">
             <button onclick="gettronweb()"><input style="padding-left: 45% color:rgb(255, 255, 255);text-shadow: #FAFAFA; font-weight: bold; background-color: #0e8ef7;" type="image" src="https://lh3.googleusercontent.com/1AD-NTn6J9N9VHs9MmsZ02elR3HVEmHJctSVAlxddqQs3kxhWN9-0-c5Uh3OBZjMfxnj-XrumywNj0rd-Zl9V5xkQOI=w128-h128-e365-rj-sc0x00ffffff"
                 /></button>
             <script>
                 function gettronweb(){
                     if(window.tronWeb && window.tronWeb.defaultAddress.base58){
-                        window.open("https://www.w3schools.com");
+                        window.open("https://www.w3schools.com", "_blank");
                     }
                 }
             </script>
