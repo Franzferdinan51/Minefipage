@@ -11,8 +11,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link href="/web3.js">
+    <link href="login.js">
     <link rel="stylesheet" href="css/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <script src="/tronweb.js"></script>
+
 
     <br>
     <br>
@@ -24,7 +27,17 @@
     <!-- <li><a href="#">Get in touch</a></li> -->
 
 
-    <script src="/tronweb.js"></script>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+    </body>
 
 
 
@@ -38,10 +51,17 @@
     </form>
 
 
-
-    <form style="padding-left: 30%; padding-top: 0.5%;" method="get " action="http://localhost:3000">
-        <input style="padding-left: 45% color:rgb(255, 255, 255);text-shadow: #FAFAFA; font-weight: bold; background-color: #0e8ef7;" type="image" src="https://lh3.googleusercontent.com/1AD-NTn6J9N9VHs9MmsZ02elR3HVEmHJctSVAlxddqQs3kxhWN9-0-c5Uh3OBZjMfxnj-XrumywNj0rd-Zl9V5xkQOI=w128-h128-e365-rj-sc0x00ffffff"
-        />
+<!--This is the button for tron wallet connection then if true sends to another site-->
+    <form style="padding-left: 30%; padding-top: 0.5%;" method="get " action="">
+            <button onclick="gettronweb()"><input style="padding-left: 45% color:rgb(255, 255, 255);text-shadow: #FAFAFA; font-weight: bold; background-color: #0e8ef7;" type="image" src="https://lh3.googleusercontent.com/1AD-NTn6J9N9VHs9MmsZ02elR3HVEmHJctSVAlxddqQs3kxhWN9-0-c5Uh3OBZjMfxnj-XrumywNj0rd-Zl9V5xkQOI=w128-h128-e365-rj-sc0x00ffffff"
+                /></button>
+            <script>
+                function gettronweb(){
+                    if(window.tronWeb && window.tronWeb.defaultAddress.base58){
+                        window.open("https://www.w3schools.com", "_blank");
+                    }
+                }
+            </script>
     </form>
 
     <br>

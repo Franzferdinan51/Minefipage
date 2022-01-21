@@ -114,6 +114,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.9;
+    margin: auto;
 }
 
 .tradingview-widget-container-mini {
@@ -122,6 +123,8 @@ body {
     padding-left: 5%;
     padding-bottom: 0.5%;
     padding-top: 1rem;
+    width: 100%;
+    margin: auto;
 }
 
 .tradingview-widget-container {
@@ -130,6 +133,8 @@ body {
     padding-left: 10%;
     padding-bottom: 5rem;
     padding-top: -100rem;
+    width: 100%;
+    margin: auto;
 }
 
 .tradingview-widget-container-BTC {
@@ -138,10 +143,14 @@ body {
     padding-left: 10%;
     padding-bottom: 0rem;
     padding-top: -100rem;
+    width: 100%;
+    margin: auto;
 }
 
 .BTCchart {
     margin-bottom: 100rem;
+    width: 100%;
+    margin: auto;
 }
 
 .converter {
@@ -150,6 +159,8 @@ body {
     padding-left: 5%;
     padding-bottom: 0.5%;
     padding-top: 1rem;
+    width: 100%;
+    margin: auto;
 }
 
 

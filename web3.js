@@ -1,12 +1,14 @@
 import Web3 from 'web3';
 import { useTronLink } from '../../contexts/tronlink';
-const {
-    wallet, // The connected wallet adress
-    walletName, // The connected wallet name
-    trxBalance, // Balance in TRX of the connected wallet
-    connectToWallet, // Method that connects to the wallet and create a listener no wallet updates
-    isConnected // Boolean that returns if the wallet is connected or not
-    isMainNet // Boolean that returns if the waller is connected on main network or not
+import TronStationSDK from 'tron-station-sdk';
+import TronWeb from 'tronweb';
+/* const {
+wallet, // The connected wallet adress
+walletName, // The connected wallet name
+trxBalance, // Balance in TRX of the connected wallet
+connectToWallet, // Method that connects to the wallet and create a listener no wallet updates
+isConnected // Boolean that returns if the wallet is connected or not
+isMainNet // Boolean that returns if the waller is connected on main network or not
 } = useTronLink();
 
 var web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:4444/'));
@@ -72,4 +74,36 @@ this.myContractInstance.methods.myMethod(myParams)
             // returns a transaction receipt}
         )
 
-        export default getWeb3;
+        /*/
+
+
+
+
+
+
+
+const HttpProvider = TronWeb.providers.HttpProvider;
+const fullNode = new HttpProvider('https://api.trongrid.io');
+const solidityNode = new HttpProvider('https://api.trongrid.io');
+const eventServer = new HttpProvider('https://api.trongrid.io');
+
+const privateKey = 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0';
+
+const tronWeb = new TronWeb(
+    fullNode,
+    solidityNode,
+    eventServer,
+    privateKey
+);
+
+// Constructor params are the tronWeb object and specification on if the net type is on main net or test net/private net
+const tronStationSDK = new TronStationSDK(tronWeb, true);
+
+async function getAccountBandwidth(address) {
+    console.log(await tronStationSDK.getAccountBandwidth(address));
+}
+
+getAccountBandwidth('TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY');
+
+
+export default getWeb3;
